@@ -1,0 +1,67 @@
+% Preamble
+\documentclass[12pt,a4paper]{article}
+\usepackage{enumerate} 	% put in numbers or bullet points
+\usepackage{setspace}	% line spacing					
+\usepackage{authblk}	% For author affiliations
+\usepackage{graphicx} 	% For adding pictures
+
+\usepackage[nomarkers]{endfloat} %Figures and tables at the end of the document
+\usepackage{pdflscape}	% for landscape pages
+\usepackage{mathtools}	% For equations etc.
+\usepackage[osf]{mathpazo} % palatino font package
+\usepackage{fixltx2e}	% includes subscripts
+\usepackage{ms}     	% load the manuscript style template - may need to change this for PeerJ
+
+
+\setcounter{secnumdepth}{0} % removes numbers from section headings
+\raggedright 			% justify the text on the left only
+\pagenumbering{arabic}	% Page numbers
+
+\usepackage[round]{natbib} % author-year citations in round brackets
+
+%-----------------------------------------
+%Title page? NB PeerJ say that they don't need a title page
+%----------------------------------------
+\title{} 
+
+\author{Sive Finlay$^{1,2}$ and Natalie Cooper$^{1,2,*}$}
+\affiliation{\noindent{\footnotesize
+$^1$ School of Natural Sciences, Trinity College Dublin, Dublin 2, Ireland.\\ 
+$^2$ Trinity Centre for Biodiversity Research, Trinity College Dublin, Dublin 2, Ireland.\\
+$^*$Corresponding author: ncooper@tcd.ie; Zoology Building, Trinity College Dublin, Dublin 2, Ireland.\\ Tel: +353 1 896 1926.\\}}
+\date{}	% To give blank date
+
+\runninghead{Cranial morphological diversity in tenrecs } 
+
+\keywords{geometric morphometrics, golden moles, morphological diversity, tenrecs}
+%---------------------------------------------------------------
+% Start of document
+\begin{document}
+\modulolinenumbers[1] 	% Line numbering on every line
+
+\mstitlepage			% Instead of \maketitle you can use the nice template to get it looking like a manuscript
+\parindent=1.5em		% Changes paragraph indenting so it's not so big
+\addtolength{\parskip}{.3em} % Changes spacing between sections so it's smaller
+%****************************************************
+
+%Abstract in a separate document for PeerJ
+%****************************************************
+\section{Introduction}
+
+%************************************
+\section{Materials and Methods}
+
+%*********************************
+\section{Results and Discussion}
+
+%**********************************
+\section{Conclusions}
+
+%*******************************
+\section{Acknowledgements}
+
+%********************************
+\bibliographystyle{sysbio} 
+\bibliography{refs_disparity} %This is a copy of my refs_thesis file so it has more references than are included in the paper
+
+\end{document}
