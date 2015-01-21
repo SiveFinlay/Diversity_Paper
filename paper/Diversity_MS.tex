@@ -11,7 +11,7 @@
 \usepackage[osf]{mathpazo} % palatino font package
 \usepackage{fixltx2e}	% includes subscripts
 \usepackage{ms}     	% load the manuscript style template - may need to change this for PeerJ
-
+\usepackage{hyperref}
 
 \setcounter{secnumdepth}{0} % removes numbers from section headings
 \raggedright 			% justify the text on the left only
@@ -69,8 +69,7 @@ $^*$Corresponding author: ncooper@tcd.ie; Zoology Building, Trinity College Dubl
 
 %Overview section: data, geometric morphometrics, measuring diversity
 
-	The methods we used involved several steps of data collection, geometric morphometrics analyses and comparisons of morphological diversity. For clarity,  Figure \ref{fig:flow} summarises all of these steps and we describe them in detail below. 
-	
+	The methods we used involved several steps of data collection, geometric morphometrics analyses and comparisons of morphological diversity. For clarity,  Figure \ref{fig:flow} summarises all of these steps and we describe them in detail below.  	
 %Methods flow chart
 	\begin{figure}[!htbp]
 	\centering
@@ -94,7 +93,8 @@ $^*$Corresponding author: ncooper@tcd.ie; Zoology Building, Trinity College Dubl
 	We photographed the skulls in three views: dorsal (top of the cranium), ventral (underside of the skull with the palate roof facing upwards) and lateral (right side of the skull). When the right sides of the skulls were damaged or incomplete we photographed the left sides and later reflected the images so that they could be compared to pictures of the right sides \citep[e.g.][]{Barrow2008}.
 	
 
-	We converted the raw files to binary (grey scale) images and re-saved them as TIFF files %\citep[uncompressed files preserve greater detail,][]{RHOI2013}. Photographs of the specimens from the American Museum of Natural History and the Smithsonian Institute are available on figshare in separate file sets for the dorsal \citep{Finlay2013d}, ventral \citep{Finlay2013v} and lateral \citep{Finlay2013l} skull pictures along with the mandibles \citep{Finlay2013m}. Copyright restrictions from the other museums prevent public sharing of their images however they are available on request.
+	We converted the raw files to binary (grey scale) images and re-saved them as TIFF files \citep{RHOI2013}. 
+	Photographs of the specimens from the American Museum of Natural History and the Smithsonian Institute are available on figshare in separate file sets for the dorsal \citep{Finlay2013d}, ventral \citep{Finlay2013v} and lateral \citep{Finlay2013l} skull pictures along with the mandibles \citep{Finlay2013m}. Copyright restrictions from the other museums prevent public sharing of their images however they are available on request.
 
 %-----------------------------------------
 \subsection{Geometric morphometric analyses}
@@ -123,6 +123,6 @@ $^*$Corresponding author: ncooper@tcd.ie; Zoology Building, Trinity College Dubl
 
 %********************************
 \bibliographystyle{sysbio} 
-\bibliography{refs_thesis} %This is a copy of my refs_thesis file so it has more references than are included in the paper
+\bibliography{refs_paper} 
 
 \end{document}
