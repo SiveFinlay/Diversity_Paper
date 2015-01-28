@@ -1,37 +1,34 @@
 % Preamble
 \documentclass[12pt,a4paper]{article}
-\usepackage{enumerate} 	% put in numbers or bullet points
-\usepackage{setspace}	% line spacing					
-\usepackage{authblk}	% For author affiliations
-\usepackage{graphicx} 	% For adding pictures
+\usepackage{enumerate} 	
+\usepackage{setspace}						
+\usepackage{authblk}	
+\usepackage{graphicx} 	
+\usepackage[nomarkers, nolists]{endfloat} 
+\usepackage{pdflscape}	
+\usepackage{mathtools}	
+\usepackage[osf]{mathpazo} 
+\usepackage{fixltx2e}	
+\usepackage{lineno}    	
+\usepackage{hyperref}
+\usepackage[round]{natbib} 
+\usepackage{setspace}
 
-\usepackage[nomarkers]{endfloat} %Figures and tables at the end of the document
-\usepackage{pdflscape}	% for landscape pages
-\usepackage{mathtools}	% For equations etc.
-\usepackage[osf]{mathpazo} % palatino font package
-\usepackage{fixltx2e}	% includes subscripts
-\usepackage{ms}     	% load the manuscript style template - may need to change this for PeerJ
-\usepackage{hyperref} %need this for url references
+\setcounter{secnumdepth}{0} 
+\raggedright 			
+\pagenumbering{arabic}	
+\linenumbers
 
-\setcounter{secnumdepth}{0} % removes numbers from section headings
-\raggedright 			% justify the text on the left only
-\pagenumbering{arabic}	% Page numbers
-
-\usepackage[round]{natbib} % author-year citations in round brackets
-
-%-----------------------------------------
-%Current title page 
-%NB PeerJ don't want a title page: just the author details but I haven't figured out how to do that without losing the formatting of the rest of the manuscript
-%I may need to get rid of the lists of tables and figures at the end: they want titles and legends to be on the same page as the figure/table
-%----------------------------------------
-
-%---------------------------------------------------------------
 % Start of document
 \begin{document}
-\modulolinenumbers[1] 	% Line numbering on every line
 
-\parindent=1.5em		% Changes paragraph indenting so it's not so big
-\addtolength{\parskip}{.3em} % Changes spacing between sections so it's smaller
+\parindent=1.5em		
+\addtolength{\parskip}{.3em} 
+\doublespace
+
+% Title page
+
+% Title:
 
 \noindent
 \textsc{Sive Finlay$^{1,2}$ and Natalie Cooper$^{1,2,*}$}\\
@@ -43,46 +40,33 @@ $^2$ Trinity Centre for Biodiversity Research, Trinity College Dublin, Dublin 2,
 \noindent
 $^*$Corresponding author: Natalie Cooper; ncooper@tcd.ie; Zoology Building, Trinity College Dublin, Dublin 2, Ireland. Tel: +353 1 896 1926.\\
 
+% Abstract
+
+	% Morphological diversity is often studied qualitatively. However, to truly understand the evolution of exceptional diversity, it is important to take a quantitative approach instead of relying on subjective, qualitative assessments. Here, we present a quantitative analysis of morphological diversity in a Family of small mammals, the tenrecs (Afrosoricida, Tenrecidae). 
+	
+	% Tenrecs are often cited as an example of an exceptionally morphologically diverse group. However, this assumption has not been tested quantitatively. We use geometric morphometric analyses of skull shape to test whether tenrecs are more morphologically diverse than their closest relatives, the golden moles (Afrosoricida, Chrysochloridae). Tenrecs occupy a wider range of ecological niches than golden moles so we predict that they will be more morphologically diverse. 
+	
+	% Contrary to our expectations, We find that tenrec skulls are only more morphologically diverse than golden moles when measured in lateral view. Furthermore, similarities among the species-rich \textit{Microgale} tenrec Genus appear to mask higher morphological diversity in the rest of the Family. These results reveal new insights into the morphological diversity of tenrecs and highlight the importance of using quantitative methods to test qualitative assumptions about patterns of morphological diversity. 
+
 \newpage
-%****************************************************
-%Abstract
-%Peer J wants the abstract as a separate document
-
-%This is the abstract from my thesis
-
-	%Patterns of morphological diversity (the variety of physical form) have important implications for our understanding of species ecology and evolution. Some clades such as cichlid fish and anole lizards are known for their high morphological diversity. Studying these groups can provide insights into the processes that led to the evolution of this exceptional diversity. 
-	%Morphological diversity is often studied qualitatively. However, to truly understand the evolution of diversity, it is important to take a quantitative approach instead of relying on subjective, qualitative assessments. Here, we present a quantitative analysis of morphological diversity in a Family of small mammals, the tenrecs (Afrosoricida, Tenrecidae). 
-	%Tenrecs are often cited as an example of an exceptionally morphologically diverse group. However, this assumption has not been tested quantitatively. We use geometric morphometric analyses of skull shape to test whether tenrecs are more morphologically diverse than their closest relatives, the golden moles (Afrosoricida, Chrysochloridae). Tenrecs occupy a wider range of ecological niches than golden moles so we predicted that they would be more morphologically diverse. 
-	%Contrary to our expectations, We found that tenrec skulls are only more morphologically diverse than golden moles when measured in lateral view. Furthermore, similarities among the species-rich \textit{Microgale} tenrec Genus appear to mask higher morphological diversity in the rest of the Family. These results reveal new insights into the morphological diversity of tenrecs and highlight the importance of using quantitative methods to test qualitative assumptions about patterns of morphological diversity. 
-
-
-
-%****************************************************
 \section{Introduction}
 
-	Analysing patterns of morphological diversity has important implications for our understanding of ecological and evolutionary traits. For example, from a functional ecology perspective, morphological characteristics of limbs inform us about locomotory style \citep[e.g.][]{Bou1987} and the trophic niches associated with particular dental morphologies affect speciation and diversification rates through time \citep{Price2012}. Morphological diversity is also an important aspect of evolutionary patterns such as adaptive radiations and convergent evolution. High morphological diversity is a unifying \citep{Losos2010a, Olson2009}, although not defining \citep{Glor2010, Olson2009}, characteristic of adaptive radiations. Furthermore, analysing morphological convergences in groups such as freshwater cichlid fish \citep{Muschick2012} and anole lizards \citep{Mahler2013} gives interesting insights into the relative repeatability of evolution \citep{Losos2011}.
+	Analysing patterns of morphological diversity has important implications for our understanding of ecological and evolutionary traits. Species morphology can influence niche occupancy and affect speciation and diversification rates through time \citep{Price2012}. High morphological diversity is also a unifying \citep{Losos2010a, Olson2009}, although not defining \citep{Glor2010, Olson2009}, characteristic of adaptive radiations. Furthermore, analysing morphological convergences in groups such as freshwater cichlid fish \citep{Muschick2012} and anole lizards \citep{Mahler2013} provides insights into the relative repeatability of evolution \citep{Losos2011}.
 
-	Although studies of morphological diversity have clear implications for our understanding of ecological and evolutionary patterns, apart from a few examples \citep[e.g.][]{Ruta2013, Goswami2011, Brusatte2008}, it is still common to study morphological diversity from a qualitative rather than quantitative perspective. However, we need to quantify the morphological similarities and differences among species to gain a better understanding of their ecological interactions and evolutionary history. Unfortunately, morphological diversity is difficult to quantify. Studies are inevitably constrained to measure the diversity of specific traits rather than overall morphologies \citep{Roy1997}. In addition, our perception of morphological diversity is influenced by the trait being used. One study of pterosaurs demonstrated that comparing the diversity of different morphological traits using varying methods produced similar results \citep{Foth2012}. However, it remains unclear whether this finding can be applied to all vertebrate groups: in some species, comparing the relative diversity of cranial and limb morphologies may yield different results \citep{Foth2012}. Furthermore, linear measurements of morphological traits can restrict our understanding of overall morphological variation. A distance matrix of measurements between specific points is unlikely to give a completely accurate representation of a three dimensional structure \citep{Rohlf1993}.
+	Although studies of morphological diversity have clear implications for our understanding of ecological and evolutionary patterns, apart from a few examples \citep[e.g.][]{Ruta2013, Goswami2011, Brusatte2008}, it is still common to study morphological diversity from a qualitative rather than quantitative perspective. However, we need to quantify the morphological similarities and differences among species to gain a better understanding of their ecological interactions and evolutionary history. Unfortunately, morphological diversity is difficult to quantify. Studies are inevitably constrained to measure the diversity of specific traits rather than overall morphologies \citep{Roy1997}. In addition, our perception of morphological diversity is influenced by the trait being used, and results may depend on the particular trait being analysed \citep{Foth2012}. Furthermore, linear measurements of morphological traits can restrict our understanding of overall morphological variation; a distance matrix of measurements among specific points is unlikely to give a completely accurate representation of a three dimensional structure \citep{Rohlf1993}. Geometric morphometric approaches can circumvent some of these issues by using a system of Cartesian landmark coordinates to define anatomical points \citep{Adams2004}. This method captures more of the true, overall anatomical shape of particular structures \citep{Mitteroecker2009}. These more detailed approaches are useful tools for studying patterns of morphological diversity.
 	
-	These are important limitations to consider but geometric morphometric approaches help to overcome some of the issues associated with traditional morphological studies \citep{Adams2004}. Morphometric studies based on caliper measurements of particular features can only describe a limited set of distances, ratios and angles which often fail to capture the overall shape of a specific structure \citep{Slice2007}. Geometric morphometrics circumvents these issues by using a system of Cartesian landmark coordinates to define anatomical points. This method captures more of the true, overall anatomical shape of particular structures \citep{Mitteroecker2009}. These more detailed approaches are useful tools for studying patterns of morphological diversity.
+	Here we apply geometric morphometric techniques to quantify morphological diversity in a Family of small mammals, the tenrecs. Tenrecs (Afrosoricida, Tenrecidae) are a morphologically diverse group that is commonly cited as an example of both convergent evolution and an adaptive radiation \citep{Soarimalala2011, Eisenberg1969}. The Family is comprised of 34 species, 31 of which are endemic to Madagascar \citep{Olson2013}. Body masses of tenrecs span three orders of magnitude (2.5 to $>$ 2,000g); a greater range than all other Families, and most Orders, of living mammals \citep{Olson2003}. Within this vast size range there are tenrecs which convergently resemble shrews (\textit{Microgale} tenrecs), moles (\textit{Oryzorictes} tenrecs) and hedgehogs \citep[\textit{Echinops} and \textit{Setifer} tenrecs,][]{Eisenberg1969}. Their similarities include examples of morphological, behavioural and ecological convergence \citep{Soarimalala2011}. Tenrecs are one of only four endemic mammalian clades in Madagascar and the small mammal species they resemble are absent from the island \citep{Garbutt1999}. Therefore, it appears that tenrecs represent an adaptive radiation of species which filled otherwise vacant ecological niches \citep{Soarimalala2011}.
 	
-	Here we apply geometric morphometric techniques to quantify morphological diversity in a Family of small mammals, the tenrecs. Tenrecs (Afrosoricida, Tenrecidae) are a morphologically diverse group that is commonly cited as an example of both convergent evolution and an adaptive radiation \citep{Soarimalala2011, Eisenberg1969}. The Family is comprised of 34 species, 31 of which are endemic to Madagascar \citep{Olson2013}. Body masses of tenrecs span three orders of magnitude (2.5 to > 2,000g); a greater range than all other Families, and most Orders, of living mammals \citep{Olson2003}. Within this vast size range there are tenrecs which convergently resemble shrews (\textit{Microgale} tenrecs), moles (\textit{Oryzorictes} tenrecs) and hedgehogs \citep[\textit{Echinops} and \textit{Setifer} tenrecs,][]{Eisenberg1969}. Their similarities include examples of morphological, behavioural and ecological convergence \citep{Soarimalala2011}. Tenrecs are one of only four endemic mammalian clades in Madagascar and the small mammal species they resemble are absent from the island \citep{Garbutt1999}. Therefore, it appears that tenrecs represent an adaptive radiation of species which filled otherwise vacant ecological niches \citep{Soarimalala2011}.
-	The similarities among tenrecs and other small mammals are even more remarkable when you consider their phylogenetic history. Tenrecs were originally classified within the general "Insectivora" clade and only molecular studies revealed their true phylogenetic affinities within the Afrotherian mammals \citep{Stanhope1998}. Therefore, despite initial appearances, tenrecs are more closely related to elephants, manatees and aardvarks than they are to shrews, moles or hedgehogs. 
-
-	Although tenrecs are often cited as an example of both an adaptive radiation and exceptional convergent evolution, these claims have not been investigated quantitatively. There are qualitative similarities among the hind limb morphologies of tenrecs and several other unrelated species with similar locomotory styles \citep{Salton2009} but the degree of morphological similarity has not been established. Morphological diversity is an important feature of adaptive radiations \citep{Losos2010a} and it also informs our understanding of convergent phenotypes \citep{Muschick2012}. Therefore, it is important to quantify patterns of morphological diversity in tenrecs to gain an insight into their evolution. 
-	
+	Although tenrecs are often cited as an example of both an adaptive radiation and exceptional convergent evolution \citep{Soarimalala2011, Eisenberg1969}, these claims have not been investigated quantitatively. There are qualitative similarities among the hind limb morphologies of tenrecs and several other unrelated species with similar locomotory styles \citep{Salton2009} but the degree of morphological similarity has not been established. Morphological diversity is an important feature of adaptive radiations \citep{Losos2010a} and it also informs our understanding of convergent phenotypes \citep{Muschick2012}. Therefore, it is important to quantify patterns of morphological diversity in tenrecs to gain an insight into their evolution. 
 	
 	We present the first quantitative study of patterns of morphological diversity in tenrecs. We use geometric morphometric techniques \citep{Rohlf1993} to compare cranial morphological diversity in tenrecs to that of their closest relatives, the golden moles (Afrosoricida, Chrysochloridae). 
-	We expect tenrecs to be more morphologically diverse than golden moles because tenrecs occupy a wider variety of ecological niches. The tenrec Family includes terrestrial, semi-fossorial, semi-aquatic and semi-arboreal species \citep{Soarimalala2011}. In contrast, all golden moles occupy very similar, fossorial ecological niches \citep{Bronner1995}. Greater ecological variety is often (though not always) correlated with higher morphological diversity \citep{Losos2010a}. 
-	However, our results reveal that, in skulls at least, morphological diversity in tenrecs is not as great as it first appears.
+	We expect tenrecs to be more morphologically diverse than golden moles because tenrecs occupy a wider variety of ecological niches. The tenrec Family includes terrestrial, semi-fossorial, semi-aquatic and semi-arboreal species \citep{Soarimalala2011}. In contrast, all golden moles occupy very similar, fossorial ecological niches \citep{Bronner1995}. Greater ecological variety is often (though not always) correlated with higher morphological diversity \citep{Losos2010a}. However, our results reveal that, in skulls at least, morphological diversity in tenrecs is not as great as it first appears.
 	
-	%Might need more to finish off the introduction?
-%************************************
 \section{Materials and Methods}
 
-	The methods we used involved several steps of i) data collection, ii) geometric morphometric analyses and iii) estimating morphological diversity. For clarity,  Figure \ref{fig:flow} summarises all of these steps and we describe them in detail below.  	
+	Our methods involved i) data collection, ii) geometric morphometric analyses and iii) estimating morphological diversity. For clarity,  Figure \ref{fig:flow} summarises all of these steps and we describe them in detail below.  	
 	
-%Methods flow chart
+% Methods flow chart
 	\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=1\linewidth,height=0.8\textheight]{figures/methods_flowchart_paper.png}
@@ -93,31 +77,19 @@ $^*$Corresponding author: Natalie Cooper; ncooper@tcd.ie; Zoology Building, Trin
 		\end{figure}
 
 \subsection{Data collection}
-	One of us (SF) used the collections of five museums: the Natural History Museum, London (BMNH), the Smithsonian Institute Natural History Museum, Washington D.C. (SI), the American Museum of Natural History, New York (AMNH), the Museum of Comparative Zoology, Cambridge M.A. (MCZ) and the Field Museum of Natural History, Chicago (FMNH). We recorded species names as they were written on museum specimen labels and then corrected them to match the taxonomy in Wilson and Reeder's Mammal Species of the World \citeyearpar{Wilson2005}. For recently identified species,  which are not included in Wilson and Reeder \citeyearpar{Wilson2005}, we used the taxonomy recorded on the specimen labels. Wilson and Reeder \citeyearpar{Wilson2005} record 30 species of tenrec but more recent studies indicate that there are now 34 species \citep[][]{Olson2013}. The additional species belong to the shrew tenrec (\textit{Microgale}) Genus and represent either recognition of cryptic species boundaries \citep{Olson2004} or discovery of new species \citep{Goodman2006, Olson2009}. Only one of these four recent additions, \textit{M. jobihely}, was present in the museum collections and therefore we could not include the three other newly recognised species in the analyses. 
- 	We photographed all of the tenrec and golden mole skulls available in the collections. This included 31 of the 34 species in the tenrec Family and 12 of the 21 species of golden moles \citep{Wilson2005}.
-	%Left out the points about male/female and adult/juvenile
+	One of us (SF) collected data from five museums: Natural History Museum, London (BMNH), Smithsonian Institute Natural History Museum, Washington D.C. (SI), American Museum of Natural History, New York (AMNH), Museum of Comparative Zoology, Cambridge M.A. (MCZ) and Field Museum of Natural History, Chicago (FMNH). We used the taxonomy in Wilson \& Reeder's Mammal Species of the World \citeyearpar{Wilson2005}, except for the recently discovered tenrec species \textit{Microgale jobihely}. We photographed all of the tenrec and golden mole skulls available in the collections. This included 31 of the 34 species in the tenrec Family \citep{Olson2013} and 12 of the 21 species of golden moles \citep{Wilson2005}.
 	
-	We took pictures of the skulls using photographic copy stands consisting of a camera attachment with an adjustable height bar, a flat stage on which to place the specimen and an adjustable light source. To take possible light variability into account, on each day we took a photograph of a white sheet of paper and used the custom white balance function on the camera to set the image as the baseline "white" measurement for those particular light conditions.
-		
-	We photographed the specimens with a Canon EOS 650D camera fitted with a EF 100 mm f/2.8 Macro USM lens. We used a remote control (H\"ahnel Combi TF) to take the photos to avoid shaking the camera and distorting the images. We photographed the specimens on a black material background with a light source in the top left-hand corner of the photograph. We used small bean bags as necessary to hold the specimens in position while being photographed to ensure that they lay in a flat plane relative to the camera and did not tilt in any direction. We used the grid-line function on the live-view display screen of the camera to position the specimens in the centre of each image. 
+	We took pictures of the skulls using photographic copy stands. To take possible light variability into account, we took a photograph of a white sheet of paper each day and used the custom white balance function on the camera to set the image as the baseline "white" measurement for those particular light conditions. We photographed the specimens with a Canon EOS 650D camera fitted with a EF 100 mm f/2.8 Macro USM lens and using a remote control (H\"ahnel Combi TF) to avoid camera shake. We photographed the specimens on a black material background with a light source in the top left-hand corner of the photograph. We used small bean bags to hold the specimens in position to ensure that they lay in a flat plane relative to the camera, and used the grid-line function on the live-view display screen of the camera to position the specimens in the centre of each image. 
 	
-	We photographed the skulls in three views: dorsal (top of the cranium), ventral (underside of the skull with the palate roof facing upwards) and lateral (right side of the skull) (Figure \ref{fig:flow}). When the right sides of the skulls were damaged or incomplete we photographed the left sides and later reflected the images so that they could be compared to pictures of the right sides \citep[e.g.][]{Barrow2008}.
-	
+	All skulls were photographed in three views: dorsal, ventral and lateral (right side) (Figure \ref{fig:flow}). When the right sides of the skulls were damaged or incomplete, we photographed the left sides and later reflected the images \citep[e.g.][]{Barrow2008}. After taking the photographs we converted the raw files to binary (grey scale) images and re-saved them as TIFF files \citep[uncompressed files preserve greater detail, ][]{RHOI2013}. Photographs of the specimens from the American Museum of Natural History and the Smithsonian Institute Natural History Museum are available on figshare (dorsal; \citet{Finlay2013d}, ventral; \citet{Finlay2013v} and lateral; \citet{Finlay2013l}). Copyright restrictions from the other museums prevent public sharing of their images but they are available on request.
 
-	We converted the raw files to binary (grey scale) images and re-saved them as TIFF files \citep[uncompressed files preserve greater detail, ][]{RHOI2013}. 
-	Photographs of the specimens from the American Museum of Natural History and the Smithsonian Institute are available on figshare in separate file sets for the dorsal \citep{Finlay2013d}, ventral \citep{Finlay2013v} and lateral \citep{Finlay2013l} skull pictures. Copyright restrictions from the other museums prevent public sharing of their images but they are available on request.
-
-%-----------------------------------------
 \subsection{Geometric morphometric analyses}
 
-	We used a combination of landmark and semilandmark analysis approaches to assess the shape variability in the skulls.  We used the TPS software suite \citep{Rohlf2013} to digitise landmarks and curves on the photos. We set the scale on each image individually to standardise for the different camera heights used when photographing the specimens. We created separate data files for each of the three morphometric analyses (skulls in dorsal, ventral and lateral views). One of us (SF) digitised landmarks and semilandmark points on every image individually. Some specimens were too damaged to use in particular views so there were a different total number of images for each analysis. Our final data sets included photographs of 182 skulls in dorsal view (148 tenrecs and 34 golden moles), 173 skulls in ventral view (141 tenrecs and 32 golden moles) and 171 skulls in lateral view (140 tenrecs and 31 golden moles).
+	We used a combination of landmark and semilandmark analysis approaches to assess the shape variability in the skulls.  We used the TPS software suite \citep{Rohlf2013} to digitise landmarks and curves on the photos. We set the scale on each image individually to standardise for the different camera heights used when photographing the specimens. We created separate data files for each of the three morphometric analyses (dorsal, ventral and lateral views). One of us (SF) digitised landmarks and semilandmark points on every image individually. Some specimens were too damaged to use in particular views so there were a different total number of images for each analysis. Our final data sets included photographs of 182 skulls in dorsal view (148 tenrecs and 34 golden moles), 173 skulls in ventral view (141 tenrecs and 32 golden moles) and 171 skulls in lateral view (140 tenrecs and 31 golden moles).
 
-%Maybe move this to the supplementary?
-	When using semilandmark approaches there is a potential problem of over - sampling: simpler structures will require fewer semilandmarks to accurately represent their shape  \citep{MacLeod2012}. To ensure that we applied a uniform standard of shape representation to each outline segment (i.e. that simple structures would not be over-represented and more complex features would not be under-represented), we followed the method outlined by MacLeod \citeyearpar{MacLeod2012}. For each data set we chose a random selection of photos of specimens which represented the breadth of the morphological data (i.e. specimens from each sub-group of species). We drew the appropriate curves on each specimen and over-sampled the number of points on the curves. We measured the length of the line and regarded that as the 100\%, true length of that outline. We then re-sampled the curves with decreasing numbers of points and measured the length of the outlines. We calculated the length of each re-sampled curve as a percentage of the total length of the curve and then found the average percentage length for that reduced number of semilandmark points across all of the specimens in my test file. We continued this process until we found the minimum number of points that gave a curve length which was at least 95\% accurate.  We repeated these curve-sampling tests for each analysis to determine the minimum number of semilandmark points which would give accurate representations of morphological shape.
+	Figure \ref{fig:landmarks} depicts that landmarks and curves which we used for each skull view. For landmarks defined by dental structures, we used published dental sources \citep{Repenning1967, Eisenberg1969, Nowak1983, MacPhee1987, KnoxJones1992, Davis1997, Querouil2001, Nagorsen2002, Wilson2005, Goodman2006, Karatas2007, Hoffmann2008, Asher2008,  Muldoon2009, Lin2010} where available to identify the number and type of teeth in each species. Detailed descriptions of the landmarks can be found in the supplementary material.
 	
-	Figure \ref{fig:landmarks} depicts that landmarks and curves which we used for each of the sets of photographs. For landmarks which are defined by dental structures, we used published dental sources \citep{Repenning1967, Eisenberg1969, Nowak1983, MacPhee1987, KnoxJones1992, Davis1997, Querouil2001, Nagorsen2002, Wilson2005, Goodman2006, Karatas2007, Hoffmann2008, Asher2008,  Muldoon2009, Lin2010} where available to identify the number and type of teeth in each species. Detailed descriptions of the landmarks can be found in the supplementary material.
-%****************************************************	
-	%Landmark pictures: 3 skulls together	
+% Landmark pictures: 3 skulls together	
 	\begin{figure}[!htbp]
 		\centering
 		\includegraphics[width=1\linewidth]{figures/skdors+skvent+sklat_BW.png}
@@ -125,28 +97,26 @@ $^*$Corresponding author: Natalie Cooper; ncooper@tcd.ie; Zoology Building, Trin
 		{Landmarks (numbered points) and curves (outlines) for the skulls in dorsal,ventral and lateral view. See the supplementary material for detailed landmark descriptions. The skulls are two different specimens of \textit{Potamogale velox} (otter shrew tenrec), museum accession numbers AMNH 51327 (dorsal picture) and BMNH 1934.6.16.2 (ventral and lateral pictures). }
 		\label{fig:landmarks}
 	\end{figure}
+
+	When using semilandmark approaches there is a potential problem of over-sampling: simpler structures will require fewer semilandmarks to accurately represent their shape \citep{MacLeod2012}. To ensure that we applied a uniform standard of shape representation to each outline segment (i.e. that simple structures would not be over-represented and more complex features would not be under-represented), we followed the method outlined by MacLeod \citeyearpar{MacLeod2012} to determine the minimum number of semilandmark points which would give accurate representations of morphological shape.
 	
-%***************************************************
+	After creating the files with the landmarks and semilandmarks placed on each photograph, we used TPSUtil \citep{Rohlf2012} to create "sliders" files that defined which points in the TPS files should be treated as semilandmarks \citep{Zelditch2012}. We combined the landmarks and taxonomic identification files into a single morphometrics data object and carried out all further analyses in R version 3.1.1 \citep{Team2014}. 
 	
-	After creating the files with the landmarks and semilandmarks placed on each photograph, we used TPSUtil \citep{Rohlf2012} to create "sliders" files that defined which points in the TPS files should be treated as semilandmarks \citep{Zelditch2012}. We combined the landmarks and taxonomic identification files into a single morphometrics data object and carried out all further analyses in R version 3.1.1 \citep{Team2014}. Data and code for all of our analyses is available on GitHub \citep{Finlay2015c}.
+	Next we used the \texttt{gpagen} function in the geomorph package \citep{Adams2013} to run a general Procrustes alignment \citep{Rohlf1993} of the landmark coordinates while sliding the semilandmarks by minimising Procrustes distance \citep{Bookstein1997}. We used these Procrustes-aligned coordinates of all specimens to calculate average shape values for each species which we then used for a principal components (PC) analysis with the \texttt{plotTangentSpace} function \citep{Adams2013}. We selected the number of principal component (PC) axes that accounted for 95\% of the variation in the data (Figure \ref{fig:flow}) and used these axes to estimate morphological diversity in each Family. 
+
+ 	The majority of tenrec species (19 out of 31 in our data) belong to the \textit{Microgale} (shrew-like) Genus that has relatively low morphological diversity \citep{Soarimalala2011, Jenkins2003}. This may mask signals of higher morphological diversity among other tenrecs. To test this, we created a subset of the tenrec data that included just five of the \textit{Microgale} species, each representing one of the five sub-divisions of \textit{Microgale} outlined by Soarimalala \& Goodman \citeyearpar{Soarimalala2011}, i.e. small, small-medium, medium, large and long-tailed species. We repeated the general Procrustes alignment described above using this reduced data set. We then compared the morphological diversity of the full data set (31 species of tenrec) or a reduced data set with just 17 species of tenrec (five \textit{Microgale} and 12 non-\textit{Microgale} species; Figure \ref{fig:flow}) to that of the 12 species of golden moles.
 	
-	At this stage, we either used the full data set (31 species of tenrec and 12 species of golden mole) or a reduced data set with just 17 species of tenrec (Figure \ref{fig:flow}). We created this reduced data set because the majority of tenrec species (19 out of 31 in our data) belong to the \textit{Microgale} (shrew-like) Genus that has relatively low morphological diversity \citep{Soarimalala2011, Jenkins2003}. This may mask signals of higher morphological diversity among other tenrecs. To test this, we created a subset of the tenrec data that included just five of the \textit{Microgale} species, each representing one of the five sub-divisions of \textit{Microgale} outlined by Soarimalala and Goodman \citeyearpar{Soarimalala2011}, i.e. small, small-medium, medium, large and long-tailed species. We compared the morphological diversity of this subset of tenrecs (n=17: five \textit{Microgale} and 12 non-\textit{Microgale} species) to that of the 12 species of golden moles (dashed arrows in Figure \ref{fig:flow}). After this selection stage, all further steps in the analyses were the same.
-	
-		
-	For each analysis, we used the gpagen function in the geomorph package \citep{Adams2013} to run a general Procrustes alignment \citep{Rohlf1993} of the landmark coordinates while sliding the semilandmarks by minimising Procrustes distance \citep{Bookstein1997}. We used these Procrustes-aligned coordinates of all specimens to calculate average shape values for each species which we then used for a principal components (PC) analysis with the plotTangentSpace function \citep{Adams2013}. We selected the number of principal component (PC) axes that accounted for 95\% of the variation in the data (Figure \ref{fig:flow}) and used these axes to estimate morphological diversity in each Family.
-%-------------------------------------------------------	
 \subsection{Estimating morphological diversity}
 	
-	We grouped the PC scores for tenrecs and golden moles separately so that we could estimate the diversity of each Family and then compare the two groups (Figure \ref{fig:flow}). We compared morphological diversity in two ways. First, we used non parametric multivariate analysis of variance \citep[npMANOVA;][]{Anderson2001} to test whether tenrecs and golden moles occupied significantly different positions within the morphospaces defined by the PC axes that accounted for 95\% of the overall variation in the data \citep[e.g.][]{Serb2011, Ruta2013}. A significant difference between the two Families would indicate that they have unique morphologies which do not overlap. Second, we compared morphological diversity within tenrecs to the diversity within golden moles. We define morphological diversity as the mean Euclidean distance (sum of squared differences) between each species and its Family centroid (Figure \ref{fig:centroids}). This is summarised in the equation below where \textit{n} is the number of species in the Family, \textit{i} is the number of PC axes and \textit{c} are the average PC scores for each axis (the centroid). 
+	We grouped the PC scores for tenrecs and golden moles separately so that we could estimate the diversity of each Family and then compare the two groups (Figure \ref{fig:flow}). We compared morphological diversity in two ways. First, we used non parametric multivariate analysis of variance \citep[npMANOVA;][]{Anderson2001} to test whether tenrecs and golden moles occupied significantly different positions within the morphospaces defined by the PC axes that accounted for 95\% of the overall variation in the data \citep[e.g.][]{Serb2011, Ruta2013}. A significant difference between the two Families would indicate that they have unique morphologies which do not overlap. Second, we compared morphological diversity within tenrecs to the diversity within golden moles. We define morphological diversity as the mean Euclidean distance (sum of squared differences) between each species and its Family centroid (Figure \ref{fig:centroids}). This is summarised in the equation below where \textit{n} is the number of species in the Family, \textit{i} is the number of PC axes and \textit{c} is the average PC score for each axis (the centroid). 
 	
 	\begin{equation}
-	Disparity = \frac{\sqrt{\Sigma(PCn_{i}-PCc_{i})^2}}{n}
+		Disparity = \frac{\sqrt{\Sigma(PCn_{i}-PCc_{i})^2}}{n}
 	\end{equation}
-
 
 	If tenrecs are more morphologically diverse than golden moles, then they should be more dispersed within the morphospaces and have, on average, higher values of mean Euclidean distance. 	
 
-%Diagram of mean distance to centroid (based on the diagram in Cooper et al 2009)
+% Diagram of mean distance to centroid
 	\begin{figure}[!htbp]
 	\centering
 	\includegraphics [width=0.7\linewidth, height=0.7\textheight, keepaspectratio]{figures/Centroids.png}
@@ -156,77 +126,71 @@ $^*$Corresponding author: Natalie Cooper; ncooper@tcd.ie; Zoology Building, Trin
 			\end{math}) PC scores for the entire Family). Morphological diversity of the Family is the average value of these Euclidean distances.}
 	\label{fig:centroids}
 	\end{figure}	
-%-------------------------------------------
+
 	One possible issue with these analyses is that the two Families have unequal sample sizes: 31 (or a subset of 17) tenrec species compared to just 12 golden mole species. Morphological diversity is usually decoupled from taxonomic diversity \citep[e.g.][]{Ruta2013, Hopkins2013} so larger groups are not necessarily more morphologically diverse. However, comparing morphological diversity in tenrecs to the diversity of a smaller Family could still bias the results. We used pairwise permutation tests to account for this potential issue. 
 
-	We tested the null hypothesis that tenrecs and golden moles have the same morphological diversity (the same mean Euclidean distance to the Family centroid). If this is true, when we randomly assign the group identity of each species (i.e. shuffle the "tenrec" and "golden mole" labels) and then re-compare the morphological diversity of the two groups, there would be no significant difference between these results and those obtained when the species are assigned to the correct groupings. 
-	We performed this shuffling procedure (random assignation of group identity) 1000 times and calculated the difference in morphological diversity between the two groups for each permutation. This generated a distribution of 1000 values which are calculations of the differences in morphological diversity under the assumption that the null hypothesis (equal morphological diversity in the two Families) is true. This method automatically accounts for differences in sample size because shuffling of the group labels preserves the sample size of each group: there will always be 12 species labelled as "golden mole" and then, depending on the analysis, either 31 or 17 species labelled as "tenrec". Therefore, the 1000 permuted values of differences in morphological diversity create a distribution of the expected difference in diversity between a group of sample size 31 (or 17 in the case of the subsetted tenrec data) compared to a group of sample size 12 under the null hypothesis that the two groups have the same morphological diversity. We compared the observed measures of the differences in morphological diversity between the two Families to these null distributions to determine whether there were significant differences after taking sample size into account (two-tailed t test).
-%*********************************
-\section{Results} %PeerJ lists results and discussion together but I think it makes more sense to keep them separate
-	Figure \ref{fig:threePCA} depicts the morphospaces defined by the first two principal component (PC) axes from our principal components analyses (PCAs) of skull and mandible morphologies. The PCAs are based on the average Procrustes -superimposed shape coordinates for skulls in three views (dorsal, ventral and lateral).
-%-----------------------------
-%PCA figure with three plots
+	We tested the null hypothesis that tenrecs and golden moles have the same morphological diversity (the same mean Euclidean distance to the Family centroid). If this is true, when we randomly assign the group identity of each species (i.e. shuffle the "tenrec" and "golden mole" labels) and then re-compare the morphological diversity of the two groups, there should be no significant difference between these results and those obtained when the species are assigned to the correct groupings. 
+	
+	We performed this shuffling procedure (random assignation of group identity) 1000 times and calculated the difference in morphological diversity between the two groups for each permutation. This generated a distribution of 1000 values which are calculations of the differences in morphological diversity under the assumption that the null hypothesis (equal morphological diversity in the two Families) is true. This method automatically accounts for differences in sample size because shuffling of the group labels preserves the sample size of each group: there will always be 12 species labelled as "golden mole" and then, depending on the analysis, either 31 or 17 species labelled as "tenrec". Therefore, the 1000 permuted values of differences in morphological diversity create a distribution of the expected difference in diversity between a group of sample size 31 (or 17 in the case of the tenrec data subset) compared to a group of sample size 12 under the null hypothesis that the two groups have the same morphological diversity. We compared the observed measures of the differences in morphological diversity between the two Families to these null distributions to determine whether there were significant differences after taking sample size into account (two-tailed t test). Data and code for all of our analyses are available on GitHub \citep{Finlay2015c}.
+
+\section{Results} 
+	Figure \ref{fig:threePCA} depicts the morphospaces defined by the first two principal component (PC) axes from our principal components analyses (PCAs) of skull and mandible morphologies. The PCAs are based on the average Procrustes-superimposed shape coordinates for skulls in three views (dorsal, ventral and lateral).
+
 %PCA figure
-	%From the diversity_PCAplots_3panel
 	\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=1\linewidth, height=1\textheight, keepaspectratio]{figures/PCA_threeplot.png}
 	\caption[Morphospace (principal components) plot of morphological diversity in tenrec and golden mole skulls.]
-		{Principal components plots of the morphospaces occupied by tenrecs (triangles, n=31 species) and golden moles (circles, n=12 species) for the skulls in dorsal (top left), ventral (top right) and lateral (bottom left) views. Each point represents the average skull shape of an individual species. Axes are principal component 1 (PC1) and principal component 2 (PC2) of the average scores from principal components analyses of mean Procrustes shape coordinates for each species.}
+		{Principal components plots of the morphospaces occupied by tenrecs (triangles, n=31 species) and golden moles (circles, n=12 species) for skulls in dorsal (top left), ventral (top right) and lateral (bottom left) views. Each point represents the average skull shape of an individual species. Axes are principal component 1 (PC1) and principal component 2 (PC2) of the average scores from principal components analyses of mean Procrustes shape coordinates for each species.}
 	\label{fig:threePCA}
 	\end{figure}
-%--------------------------
-	To compare morphological diversity in the two Families, we used the PC axes which accounted for 95\% of the cumulative variation in each of the skull analyses: dorsal (n=6 axes), ventral (n=7 axes) and lateral (n=7 axes). First, we compared the position of each Family within the morphospace plots. Tenrecs and golden moles occupy significantly different positions in the dorsal (npMANOVA: F\textsubscript{1,42}=68.13, R$^2$=0.62, p=0.001 ), ventral (npMANOVA: F\textsubscript{1,42}=103.33, R$^2$=0.72 , p=0.001 ) and lateral (npMANOVA: F\textsubscript{1,42}=76.7, R$^2$ =0.65, p=0.001 ) skull morphospaces,  indicating that the Families have very different, non-overlapping cranial and mandible morphologies (Figure \ref{fig:threePCA}. 
-	
-	Second, we compared the morphological diversity within each Family. Based on our measures of mean Euclidean distance to the Family centroids, tenrec skulls are more morphologically diverse than golden mole skulls when they are measured in lateral view but not in dorsal or ventral view (Table \ref{tab:diversity}). In contrast, when we analysed morphological diversity of skulls within the sub-sample of 17 tenrecs (including just five \textit{Microgale} species) compared to the 12 golden mole species, we found that tenrec skulls were significantly more morphologically diverse than golden moles in all analyses (Table \ref{tab:diversity}).
 
-%----------------------------------------
-%Results table
+	To compare morphological diversity in the two Families, we used the PC axes which accounted for 95\% of the cumulative variation in each of the skull analyses: dorsal (n=6 axes), ventral (n=7 axes) and lateral (n=7 axes). First, we compared the position of each Family within the morphospace plots. Tenrecs and golden moles occupy significantly different positions in the dorsal (npMANOVA: F\textsubscript{1,42}=68.13, R$^2$=0.62, p=0.001), ventral (npMANOVA: F\textsubscript{1,42}=103.33, R$^2$=0.72, p=0.001 ) and lateral (npMANOVA: F\textsubscript{1,42}=76.7, R$^2$ =0.65, p=0.001) skull morphospaces, indicating that the Families have very different, non-overlapping cranial and mandible morphologies (Figure \ref{fig:threePCA}. 
+	Second, we compared the morphological diversity within each Family. Based on our measures of mean Euclidean distance to the Family centroids, tenrec skulls are more morphologically diverse than golden mole skulls when they are measured in lateral view but not in dorsal or ventral view (Table \ref{tab:diversity}). In contrast, when we analysed morphological diversity of skulls within the sub-sample of 17 tenrecs (including just five \textit{Microgale} species) compared to the 12 golden mole species, we found that tenrec skulls were significantly more morphologically diverse than golden moles in all analyses (Table \ref{tab:diversity}). The pairwise permutation tests for each analysis confirmed that differences in morphological diversity were not artefacts of differences in sample size (Table \ref{tab:permutations})
 
+% Results table
 	\begin{table}[!htbp]			
 		\caption[Comparing morphological diversity in tenrecs and golden moles.]
 		{Morphological diversity in tenrecs compared to golden moles (12 species). N is the number of tenrec species: 31 species or 17 species including just five representatives of the \textit{Microgale} Genus. Morphological diversity of the Family is the mean Euclidean distance from each species to the Family centroid. Significant differences between the two Families (p$<$0.05) from two-tailed t-tests are highlighted in bold.}
 		\input{tables/diversity.results} 
 		\label{tab:diversity}  
 	\end{table}
-
-%---------------------------------------------
-	The pairwise permutation tests for each analysis confirmed that differences in morphological diversity were not artefacts of differences in sample size (Table \ref{tab:permutations})
-%--------------------------------------------	
+	
+% Permutations results table	
 \begin{table}[!htbp]			
 	\caption[Results of the permutation tests]{Results of the permutation analyses comparing the observed differences in morphological diversity to a null distribution of expected results. Morphological diversity of the Family is the mean Euclidean distance from each species to the Family centroid. Results are shown for both the full (N=31 species of tenrec compared to 12 species of golden mole) and reduced (N=17 species of tenrec compared to 12 golden moles) data sets. Significant values (p$<$0.05) indicate that the observed morphological diversity is different to the expected differences under a null hypothesis of equivalent diversities in the two Families.}
 		\input{tables/perm.results} 
 		\label{tab:permutations}  
 	\end{table}
-%----------------------------------
+
 \section{Discussion}
-%Could move this paragraph to the conclusions
+
 	Tenrecs are often cited as an example of a mammalian group with high morphological diversity \citep{Olson2013, Soarimalala2011, Eisenberg1969}. They are also more ecologically diverse than their closest relatives \citep{Soarimalala2011, Bronner1995} so we predicted that they would be more morphologically diverse than golden moles. However, our results do not support our original prediction, highlighting the importance of quantitative tests of perceived morphological patterns.
 
 	In our full analysis, tenrecs only had higher morphological diversity than golden moles when the skulls were measured in lateral view (Table \ref{tab:diversity}). There was no difference in morphological diversity when we analysed the skulls in dorsal or ventral views. This is most likely due to our choice of landmarks. The two outline curves in lateral view (Figure \ref{fig:landmarks}) emphasise morphological variation in the back and top of the skulls. These curves summarise overall shape variation but they do not identify clear anatomical differences because they are defined by relative features rather than homologous structures \citep{Zelditch2012}. Therefore, high morphological diversity in tenrecs when analysed in this view may not indicate biologically or ecologically relevant variation.	
 	These lateral aspects of the skull morphology were not visible in the dorsal and ventral photographs so they could not be included in those analyses. In contrast, our landmarks in the dorsal, and particularly ventral, views focus on morphological variation in the overall outline shape of the sides of the skull and palate (Figure \ref{fig:landmarks}). The result that tenrecs are no more diverse than golden moles in these areas makes intuitive sense: most tenrecs have broad, non-specialised diets \citep{Olson2013} so there is no obvious functional reason why they should have particularly diverse palate morphologies. The different results for our analysis of lateral skull morphologies compared to dorsal and ventral views highlight the importance of using multiple approaches when studying 3D morphological shape using 2D geometric morphometrics techniques \citep{Arnqvist1998}.
-%I moved this paragraph up instead of leaving it in a separate caveats section	
-	Landmark choice and placement will inevitably influence the results of a geometric morphometrics study. Our interest in broad-scale, cross-taxonomic comparisons of cranial morphology constrained our choice of landmarks to those that could be accurately identified in many different species \citep[e.g.][]{Ruta2013, Goswami2011, Wroe2007}. In contrast, studies that use skulls to characterise morphological variation within species \citep[e.g.][]{Blagojevic2011, Bornholdt2008} or to delineate species boundaries within a clade \citep[e.g.][]{Panchetti2008} tend to focus on more detailed, biologically homologous landmarks \citep{Zelditch2012}. Repeating our analyses with a narrower taxonomic focus may give greater insight into the specific morphological differences among subgroups of tenrecs and golden moles.
-	
-
+    
+    Landmark choice and placement will inevitably influence the results of a geometric morphometrics study. Our interest in broad-scale, cross-taxonomic comparisons of cranial morphology constrained our choice of landmarks to those that could be accurately identified in many different species \citep[e.g.][]{Ruta2013, Goswami2011, Wroe2007}. In contrast, studies that use skulls to characterise morphological variation within species \citep[e.g.][]{Blagojevic2011, Bornholdt2008} or to delineate species boundaries within a clade \citep[e.g.][]{Panchetti2008} tend to focus on more detailed, biologically homologous landmarks \citep{Zelditch2012}. Repeating our analyses with a narrower taxonomic focus may give greater insight into the specific morphological differences among subgroups of tenrecs and golden moles.
 	
 	In addition to the differences among the three skull views, our results indicate that, in skulls at least, the overall morphological diversity within tenrecs is not as large as is often assumed \citep[e.g.][]{Eisenberg1969, Olson2013}. Studies of morphological variation are sensitive to the sampling used. If a particular morphotype is over-represented then the similarities among those species will reduce the overall morphological variation within the group \citep{Foote1991}. This appears to be the case for our data; it was only when we included a sub-sample of \textit{Microgale} tenrecs that we found higher morphological diversity in tenrecs compared to golden moles across all three skull analyses (Table \ref{tab:diversity}).
 	While there are clear physical differences among Family members \citep{Olson2013, Eisenberg1969}, the majority of tenrecs are very morphologically similar \citep{Jenkins2003} so morphological diversity in the Family as a whole is not as large as it first appears.  
+	
 	The goal of our study was to quantify morphological variation in tenrecs instead of relying on subjective assessments of their high morphological diversity \citep{Olson2013, Soarimalala2011, Eisenberg1969}. However, it is difficult to quantify overall morphological diversity because any study is inevitably constrained by its choice of specific traits \citep{Roy1997}. Variation in skull shape is only one aspect of overall morphology. Quantifying variation in other morphological traits could yield different patterns. Therefore future work should extend our approach beyond skulls to gain a more complete understanding of the overall morphological diversity of tenrecs and golden moles.
-	%I combined the paragraph above within the discussion (previously it was part of a separate caveats section)
 	While recognising these limitations, our results provide valuable insights into the differences between subjective and quantitative assessments of morphological diversity. 
-%**********************************
+
 \section{Conclusions}
 	We have presented the first quantitative investigation of morphological diversity in tenrecs. Our results indicate that, overall, tenrec skulls are not more morphologically diverse than golden moles and that similarities among the species rich \textit{Microgale} tenrecs mask signals of higher morphological diversity among the rest of the Family. Of course the results presented here are restricted to just one axis of morphological variation and further analysis of other traits is required. However, our findings provide a foundation for future investigations and represent a significant step towards a more quantitative understanding of patterns of morphological and evolutionary diversity in tenrecs. 
-%*******************************
-\section{Acknowledgements} %PeerJ have a separate section for funding acknowledgements
+
+\section{Acknowledgements}
 	We thank Thomas Guillerme, Fran\c{c}ois Gould and the members of NERD club for their insightful discussions and comments. Thank you to museum staff and curators for facilitating our access to their collections: Leona Leonard and Nigel Monaghan (Natural History Museum, Ireland), Roberto Portela Miguez and Paula Jenkins (Natural History Museum, London), Esther Langan (Smithsonian Institute NMNH), Eileen Westwig (American Museum of Natural History), Judy Chupasko (Museum of Comparative Zoology) and Bill Stanley and Steve Goodman (Field Museum).
+
 %********************************
 
 %\bibliographystyle{systbio} 
 %I made my own bst style file but it doesn't fix the formatting issues
 	%I answered  yes for using an & instead of and in author lists and to have journal names in italics but it's not working
 \bibliographystyle{refstyle2} 
+
 
 \bibliography{refs_paper} 
 
