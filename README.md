@@ -4,7 +4,13 @@
 This repository contains all of the data and code for the manuscript
 
 ## Manuscript
-The latest version of the manuscript along with the supplementary material is available in the paper folder.
+The latest version of the manuscript is available in the Manuscript folder.
+
+To compile the paper:
+
+```
+make -C Manuscript
+```
 
 ## Data
 The data is available in the data folder (sub-divided into separate data sets for skulls in dorsal (skdors), ventral (skvent) and lateral (sklat) views.
