@@ -12,31 +12,23 @@
 \usepackage[margin ={2cm, 2cm, 2cm, 2cm}]{geometry}
 \usepackage[round]{natbib}
 \usepackage{hyperref} %need this for url references
+\usepackage[parfill]{parskip}
 
-
-%\setcounter{secnumdepth}{0} % removes numbers from section headings
+\setcounter{secnumdepth}{0} % removes numbers from section headings
 \raggedright 			% justify the text on the left only
 \pagenumbering{arabic}
-\linespread{1.6}
+\linespread{1.3}
 	
-
 \begin{document}
 
-\title{
-       Morphological diversity in tenrecs (Afrosoricida, Tenrecidae): Comparing tenrec skull diversity to their closest relatives.\\
-       \bigskip
-       Supplementary Material }
-\author{Sive Finlay and Natalie Cooper}
-\date{}
-\maketitle
-%I could take more out of the main paper and add it to here
-%---------------------------------------------------------
-%Landmarks 
-%---------------------------------------------------------
-\section{Landmark descriptions}
+{\centering\section{Supplementary Material}}
+
+\subsection{Landmark descriptions}
+\vspace*{-0.5cm}
 	The information below provides further details about the landmarks we used to summarise morphological shape in tenrec and golden mole skulls. Landmark numbers and curve descriptions refer to Figure 2 in the main paper. One of us (SF) placed all of the landmarks on each picture.
 
-\subsection{Skulls: dorsal view}
+\subsubsection{Skulls: dorsal view}
+\vspace*{-0.5cm}
 	Most of our landmarks in this view are relative (type 3) points which represent overall morphological shape but not necessarily homologous biological features \citep{Zelditch2012}. We placed ten landmarks and drew four semilandmark curves to represent the shape of both the braincase (posterior) and nasal (anterior) area of the skulls. Table \ref{tab:skdors} describes how we defined the landmarks and outline curves for our images of skulls in dorsal view.
 
 %Table with skdors landmark descriptions
@@ -48,9 +40,9 @@
 \end{table}
 %--------------------------------------------------------------
 
-\subsection{Skulls: ventral view}
+\subsubsection{Skulls: ventral view}
+\vspace*{-0.5cm}
 	Most of the landmarks in this view are concentrated around the dentition and palate of the animals. We identified 13 landmarks and drew one outline curve (resampled to 60 semilandmark points) around the back of the skull between landmarks 12 and 13. The high variability of our species' basi-cranial regions and difficulties associated with identifying developmentally or functionally homologous points precluded designation of additional landmarks towards the back of the skulls. Table \ref{tab:skvent} outlines the descriptions of the landmarks we used for the ventral skull photos.
-
 
 % Skulls ventral landmarks
 \begin{table}[!htb] 
@@ -64,7 +56,8 @@
 	
 %------------------------------------------------------
 \newpage
-\subsection{Skulls: lateral view}
+\subsubsection{Skulls: lateral view}
+\vspace*{-0.5cm}
 	We placed nine landmarks on the photographs of skulls in lateral view and also drew two semilandmark curves to represent the shape of the back of the skull (between landmarks 7 and 8, re-sampled to 20 semilandmark points) and the top of the skull (between landmarks 8 and 1, re-sampled to 15 semilandmark points). Table \ref{tab:sklat} describes our definitions for each of the landmark points.
 	If specimens were damaged on their right side we reflected photographs of the left lateral side of the skull so that all the images were in the same orientation.
 
@@ -76,19 +69,18 @@
 \label{tab:sklat}
 \end{table}
 %-------------------------------------------
-\section{\normalfont{Potential morphometrics errors}}
-	 
-	While 2D methods are an accepted means of comparing morphological shape \citep[e.g.][]{Adams2004, Mitteroecker2009}, particularly for comparing skull morphologies of small mammals \citep[e.g.][]{Cardini2003, Panchetti2008, White2008, Barrow2008, Scalici2011}, the inherent discrepancies associated with comparing three dimensional objects using two dimensional pictures can introduce some potential problems of possible image distortion \citep{Arnqvist1998}. Similarly, human error with how landmarks are positioned on specimens could also introduce noise into further analyses. 
-	
+\subsection{{Potential morphometrics errors}}
+\vspace*{-0.5cm}	 
+	While 2D methods are an accepted means of comparing morphological shape \citep[e.g.][]{Adams2004, Mitteroecker2009}, particularly for comparing skull morphologies of small mammals \citep[e.g.][]{Cardini2003, Panchetti2008, White2008, Barrow2008, Scalici2011}, the inherent discrepancies associated with comparing three dimensional objects using two dimensional pictures can introduce some potential problems of possible image distortion \citep{Arnqvist1998}. Similarly, human error with how landmarks are positioned on specimens could also introduce noise into further analyses.
 	In contrast to detailed intraspecific work \citep[e.g.][]{Bornholdt2008, Blagojevic2011}, photographic or landmark placement errors are unlikely to be significant in our interspecific study since one would expect that the morphological variation among species is large enough to  be detected as a signal above any background noise associated with methodological error \citep{Arnqvist1998}. Nevertheless, it is still important to assess measurement error in a morphometric data set to increase confidence in the outcome of final analyses.
 	We identified two possible sources of morphometric measurement error: specimen orientation and placement of landmarks.
 
-	Variation in the orientation of specimens for photography is one of the main sources of error in 2D morphometric studies \citep{Adriaens2007}. If specimens are not placed on a flat plane or in a consistent position relative to the camera, areas of the object which are tilted towards the camera will appear to be larger than in reality, distorting any subsequent morphometric analyses of the shape. 
+    Variation in the orientation of specimens for photography is one of the main sources of error in 2D morphometric studies \citep{Adriaens2007}. If specimens are not placed on a flat plane or in a consistent position relative to the camera, areas of the object which are tilted towards the camera will appear to be larger than in reality, distorting any subsequent morphometric analyses of the shape. 
 	One of us (SF) placed the landmarks on each set of pictures so inter-observer variation in landmark placement is not an issue for our study.  However, repeatability and reliability of our choice of landmarks could affect the final results of the analyses \citep{Arnqvist1998}.
 
-
+	
 	To measure potential orientation error, we photographed the skulls (dorsal, ventral and lateral views) of each specimen three times, cycling through the photos so that the specimen was removed and re-positioned before every shot \citep{Viscosi2011}.
-	We used a subset of the ventral skull images to test for two sources of error: specimen orientation and landmark placement error \citep{Arnqvist1998, Barrow2008}. Of the specimens which we photographed three times, we chose a random subset of seven skulls from four different Families: three tenrecs and single representatives of shrews, moles, hedgehogs and golden moles. We copied these images and placed landmarks on three copies of each image to compare variation in landmark placement within each orientation. This gave nine replicates of each skull: three separate photos, and three copies of each of those photos. As before, we ran a general Procrustes alignment \citep{Rohlf1993} of the specimens, calculated the average shape values for each skull (average of all nine pictures) and used these values for a principal components (PC) analysis. 
+	We used a subset of the ventral skull images to test for two sources of error: specimen orientation and landmark placement error \citep{Arnqvist1998, Barrow2008}. Of the specimens which we photographed three times, we chose a random subset of seven skulls from four different Families: three tenrecs and single representatives of shrews, moles, hedgehogs and golden moles. We copied these images and placed landmarks on three copies of each image to compare variation in landmark placement within each orientation. This gave nine replicates of each skull: three separate photos, and three copies of each of those photos. As before, we ran a general Procrustes alignment \citep{Rohlf1993} of the specimens, calculated the average shape values for each skull (average of all nine pictures) and used these values for a principal components (PC) analysis.
 		
 	We used a linear mixed effects model to model the shape variation (first PC axis) associated with specimen (fixed effect) and two nested random effects: photo identity nested within specimen and image replicate nested within each photograph. This nested approach was necessary to deal with the hierarchical nature of our data subset: three photos of every specimen and three replicates of each of those images. We ran the test using the lmer function in the lme4 package \citep{Bates2014}.  
 
