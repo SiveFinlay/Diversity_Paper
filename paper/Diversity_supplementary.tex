@@ -94,8 +94,19 @@
 	We used a linear mixed effects model to model the shape variation (first PC axis) associated with specimen (fixed effect) and two nested random effects: photo identity nested within specimen and image replicate nested within each photograph. This nested approach was necessary to deal with the hierarchical nature of our data subset: three photos of every specimen and three replicates of each of those images. We ran the test using the lmer function in the lme4 package \citep{Bates2014}.  
 
 	We found that specimen orientation and landmark placement have negligible effects on the overall shape variation between different skulls: the random effect variables of photo identify and image replicate explained less than 0.0001 \% of the overall shape variation among different skulls. Therefore, we are confident that shape variation among the specimens in the rest of the analyses reflects true morphological differences rather than methodological error.
+%---------------------------------------
+\section{Sample size}
 
 
+The total number of photographs used for each analysis differed slightly because some skull specimens were damaged and could only be used for certain views (see main text). Table \ref{tab:samp} summarises the total number of specimens used for each of the three analyses. We accounted for differences in sample size by analysing the average skull shape of each species and using permutation tests to ensure that differences in relative morphological diversity were not artefacts of differences in overall group size (see main text).
+
+\begin{table}[!htbp] 
+\caption[Sample size]
+		{Summary of the sample size (number of skull specimens) used for each analysis: skulls in dorsal, ventral and lateral view.} 
+\input{tables/sample.size}
+\label{tab:samp}
+\end{table}
+\newpage
 \bibliographystyle{sysbio} 
 \bibliography{refs_paper} 
 \end{document}
