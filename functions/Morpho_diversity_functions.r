@@ -19,6 +19,9 @@
     # group.diff
     # pvalue.dist
     
+#4) Sensitivity analysis (response to reviewer's comments)
+    
+    
 ####################################
 #1) General functions
 ######################
@@ -227,3 +230,39 @@ pvalue.dist <- function(distribution,obs.val){
     #but return the actual p value
   return(p)
 }
+#######################################################
+#4) Sensitivity analysis
+
+  #Function to select a random subsample of semilandmarks
+    #Select a random sample of rows in a matrix
+    semilandmark.subsample <- function(landmarks, semilandmarks, percentage){
+      semilandmark.rows <- c((1+landmarks):(semilandmarks+landmarks))
+        samp.semi <- sort(sample(semilandmark.rows, size=(semilandmarks*percentage), replace=F))
+        return(samp.semi)
+      }
+      
+#Wrapper function to have multiple steps together: 
+  #find the number of PC axes that account for 95% of the variation with a specific subsample of semilandmarks
+
+   semilandmark.subsample.PC95axes <- function (landmarks, semilandmarks, percentage){
+   
+  #1) Select a random sample of rows in a matrix (random selection of the semi landmark rows 
+      semilandmark.rows <- c((1+landmarks):(semilandmarks+landmarks))
+      samp.semi <- sort(sample(semilandmark.rows, size=(semilandmarks*percentage), replace=F))       
+        
+  #2) Combine landmark data with subsample of semilandmark data (~NB centroids issue)
+      Proc.co.sub <- list(coords.samp=Proc.co$coords[c(1:landmarks,samp.semi),,], csize=mydataGPA$Csize,ID=mydata$ID,SpecID=mydata$SpecID,
+                  Order=mydata$Order, Fam=mydata$Fam, Genus=mydata$Genus, Species=mydata$Species, Binom=mydata$Binom)
+  #3) Species averaging
+      # group the arrays of coordinates according to species
+        group.sps.coords <- species.coordinates(Proc.co.sub$coords.samp, Proc.co.sub$Binom)
+      #average coordinate values for each species
+        sps.mean <- mean.coords(group.sps.coords)
+  #4) PCA
+      sps.meanPCA <- plotTangentSpace(sps.mean$meanshape, axis1 = 1, axis2 = 2,warpgrids = TRUE, label = TRUE)
+
+  #5) Select the number of PC axes
+      PC95 <- dim(selectPCaxes(sps.meanPCA, 0.956, sps.mean$Binom))[2]
+      
+      return(PC95)
+      }
