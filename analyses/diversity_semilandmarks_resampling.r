@@ -32,11 +32,11 @@ setwd("C:/Users/sfinlay/Desktop/Diversity/data/")
 #################
 #SkDors
     #1) Landmarks
-      land <- readland.tps(file="skdors/Skdors_16_12_13_10landmarks+4curves_edited.TPS")
+      #land <- readland.tps(file="skdors/Skdors_16_12_13_10landmarks+4curves_edited.TPS")
     #2) Sliders
-      curves <- as.matrix(read.table("skdors/Skdors_16_12_13_10landmarks+4curves_sliders_edited.NTS", header=TRUE))
+      #curves <- as.matrix(read.table("skdors/Skdors_16_12_13_10landmarks+4curves_sliders_edited.NTS", header=TRUE))
     #3) Taxonomy
-      taxa <- read.csv ("skdors/Skdors_16_12_13_10landmarks_images+specimens.csv" , header=T)
+      #taxa <- read.csv ("skdors/Skdors_16_12_13_10landmarks_images+specimens.csv" , header=T)
     #4) Specimens to remove
       #Null
 
@@ -54,13 +54,13 @@ setwd("C:/Users/sfinlay/Desktop/Diversity/data/")
 #--------------------------------------------------------
 #SkLat
   #1) Landmarks
-    #land <- readland.tps(file="sklat/SkLat_08_11_13_9landmarks_2curves_edited.TPS")
+    land <- readland.tps(file="sklat/SkLat_08_11_13_9landmarks_2curves_edited.TPS")
   #2) Sliders
-    #curves <- as.matrix(read.table(file="sklat/SkLat_08_11_13_9landmarks_2curves_sliders_edited.NTS", header=TRUE))
+    curves <- as.matrix(read.table(file="sklat/SkLat_08_11_13_9landmarks_2curves_sliders_edited.NTS", header=TRUE))
   #3) Taxonomy
-    #taxa <- read.csv("sklat/SkLat_08_11_13_Specimens+images.csv", header=TRUE)
+    taxa <- read.csv("sklat/SkLat_08_11_13_Specimens+images.csv", header=TRUE)
   #4) Specimens to remove
-    #rem <- read.csv("sklat/SkLat_remove_spec.csv", header=T)
+    rem <- read.csv("sklat/SkLat_remove_spec.csv", header=T)
 
 
 #################################################
@@ -155,9 +155,9 @@ setwd("C:/Users/sfinlay/Desktop/Diversity/data/")
   #sk.landmarks <- 13
   #sk.semilandmarks <- 60
   
-#Skulls Lateral (9 landmarks, 44 semilandmarks)
-  #sk.landmarks <- 9
-  #sk.semilandmarks <- 44
+#Skulls Lateral (9 landmarks, 35 semilandmarks)
+  sk.landmarks <- 9
+  sk.semilandmarks <- 35
 
 #---------------------------------------------------------------
 
@@ -213,14 +213,14 @@ samp30 <- NULL
   colnames(PC.table) <- c("samp90", "samp80", "samp75","samp70","samp65","samp60","samp50","samp40","samp30")
   
   PC.table[,1] <- c(length(which(samp90==7)),length(which(samp90==6)), length(which(samp90==5)), length(which(samp90==4)))
-  PC.table[,2] <- c(length(which(samp90==7)),length(which(samp80==6)), length(which(samp80==5)), length(which(samp80==4)))
-  PC.table[,3] <- c(length(which(samp90==7)),length(which(samp75==6)), length(which(samp75==5)), length(which(samp75==4)))
-  PC.table[,4] <- c(length(which(samp90==7)),length(which(samp70==6)), length(which(samp70==5)), length(which(samp70==4)))
-  PC.table[,5] <- c(length(which(samp90==7)),length(which(samp65==6)), length(which(samp65==5)), length(which(samp65==4)))
-  PC.table[,6] <- c(length(which(samp90==7)),length(which(samp60==6)), length(which(samp60==5)), length(which(samp60==4)))
-  PC.table[,7] <- c(length(which(samp90==7)),length(which(samp50==6)), length(which(samp50==5)), length(which(samp50==4)))
-  PC.table[,8] <- c(length(which(samp90==7)),length(which(samp40==6)), length(which(samp40==5)), length(which(samp40==4)))
-  PC.table[,9] <- c(length(which(samp90==7)),length(which(samp30==6)), length(which(samp30==5)), length(which(samp30==4)))
+  PC.table[,2] <- c(length(which(samp80==7)),length(which(samp80==6)), length(which(samp80==5)), length(which(samp80==4)))
+  PC.table[,3] <- c(length(which(samp75==7)),length(which(samp75==6)), length(which(samp75==5)), length(which(samp75==4)))
+  PC.table[,4] <- c(length(which(samp70==7)),length(which(samp70==6)), length(which(samp70==5)), length(which(samp70==4)))
+  PC.table[,5] <- c(length(which(samp65==7)),length(which(samp65==6)), length(which(samp65==5)), length(which(samp65==4)))
+  PC.table[,6] <- c(length(which(samp60==7)),length(which(samp60==6)), length(which(samp60==5)), length(which(samp60==4)))
+  PC.table[,7] <- c(length(which(samp50==7)),length(which(samp50==6)), length(which(samp50==5)), length(which(samp50==4)))
+  PC.table[,8] <- c(length(which(samp40==7)),length(which(samp40==6)), length(which(samp40==5)), length(which(samp40==4)))
+  PC.table[,9] <- c(length(which(samp30==7)),length(which(samp30==6)), length(which(samp30==5)), length(which(samp30==4)))
 
 ##########################
 #Save the summary table
@@ -235,4 +235,4 @@ setwd("C:/Users/sfinlay/Desktop/Diversity/output/semilandmark_resampling")
     #capture.output(PC.table, file= "skvent_PCresamp.tab.txt")
 
 #Sklat
-    #capture.output(PC.table, file= "sklat_PCresamp.tab.txt")
+    capture.output(PC.table, file= "sklat_PCresamp.tab.txt")

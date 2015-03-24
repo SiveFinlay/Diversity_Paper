@@ -1,0 +1,5 @@
+        samp90 samp80 samp75 samp70 samp65 samp60 samp50 samp40 samp30
+7PCaxes     12      4      1      1      1      0      0      0      0
+6PCaxes     88     96     99     99     97     98     56     15      0
+5PCaxes      0      0      0      0      2      2     44     85     84
+4PCaxes      0      0      0      0      0      0      0      0     16
