@@ -20,7 +20,8 @@
     # pvalue.dist
     
 #4) Sensitivity analysis (response to reviewer's comments)
-    
+    #semilandmark.subsample
+    #semilandmark.subsample.PC95axes
     
 ####################################
 #1) General functions

@@ -212,6 +212,10 @@ par(mar=c(5,5,4,4), mfrow=c(2,2))
       axis(side=2, at=0, las=1, cex.axis=1.3)
     #add dotted lines along 0,0
       abline(0,0, h=0, v=0, lty=2, lwd=1)
+ 
+ #identify points
+#identify(skdors.xaxis, skdors.yaxis,labels=(skdors.sp.fam$Binom))
+ 
       
 #SkVent
   plot(skvent.xaxis, skvent.yaxis, xlab="", ylab="", las=1,
@@ -225,6 +229,8 @@ par(mar=c(5,5,4,4), mfrow=c(2,2))
     #add dotted lines along 0,0
       abline(0,0, h=0, v=0, lty=2, lwd=1)
 
+ #identify points
+#identify(skvent.xaxis, skvent.yaxis,labels=(skvent.sp.fam$Binom))
 
 #SkLat
   plot(sklat.xaxis, sklat.yaxis, xlab="", ylab="", las=1,
@@ -237,12 +243,12 @@ par(mar=c(5,5,4,4), mfrow=c(2,2))
       axis(side=2, at=0, las=1, cex.axis=1.3)
     #add dotted lines along 0,0
       abline(0,0, h=0, v=0, lty=2, lwd=1)
-      
+ #identify points
+#identify(sklat.xaxis, sklat.yaxis,labels=(sklat.sp.fam$Binom))      
 
 
 
-#identify points
-#identify(mands.xaxis, mands.yaxis,labels=(mands.sp.fam$Binom))
+
 
 #I copied and pasted the plots into a powerpoint presentation and added the labels to the axes
   #Saved within Diversity/output/shapedata

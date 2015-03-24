@@ -97,29 +97,8 @@ setwd("C:/Users/sfinlay/Desktop/Diversity/data/")
   mydata <- select.from.list(combine, tc.gm)
   mydata <- droplevels.from.list(mydata)
   
-###################################
-#Resample the number of semilandmarks
-########################
-
-#Identify the rows which are semilandmarks (not landmarks)
-  #The number will be different for each analysis
-  
-  #Skulls Dorsal: 10 landmarks and 44 semilandmarks
-    #semilandmarks <- c(11:dim(mydata$land)[1])
-    
-  #Select a random sample of the semilandmarks (retain a percentage of the total number of semilandmarks)
-      #samp.semi50 <- sort(sample(semilandmarks, size=(dim(mydata$land)[1])/2, replace=F))
-      
-  #Select the landmarks along with the subsample of semilandmarks
-      #mydata$land[c(1:10,samp.semi50),,]
-      
-#Problem with curves: identify sliders based on the original landmarks and semilandmarks
-  # random re-sampling of the curves rows wouldn't make sense
-#BACK TO HERE
-
-
 ##############################################
-#Procrustes superimposition before resampling semilandmarks
+#Procrustes superimposition 
 ##########################################
 #General Procrustes Alignment of all of the scaled coordinates
   mydataGPA <- gpagen(mydata$land, curves=mydata$curves, ProcD=TRUE,)
@@ -235,4 +214,4 @@ setwd("C:/Users/sfinlay/Desktop/Diversity/output/semilandmark_resampling")
     #capture.output(PC.table, file= "skvent_PCresamp.tab.txt")
 
 #Sklat
-    capture.output(PC.table, file= "sklat_PCresamp.tab.txt")
+    #capture.output(PC.table, file= "sklat_PCresamp.tab.txt")
